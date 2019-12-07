@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javacheck.mybatis.mapper.Paper_CourserclassMapper">
+    <select id="getAllUserByPage" resultType="com.javacheck.mybatis.entity.Paper_Courserclass">
+      select
+        *
+      FROM
+        kh_paper_courserclass
+      limit #{page},#{size}
+    </select>
+    <select id="getTotal" resultType="java.lang.Long">
+       select count(*) from kh_paper_courserclass;
+    </select>
+
+</mapper>
